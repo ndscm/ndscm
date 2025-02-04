@@ -1,3 +1,9 @@
+# Bazel
+bazel-bin
+bazel-dev
+bazel-out
+bazel-testlogs
+
 # Common
 .cache
 node_modules
