@@ -17,3 +17,10 @@ bazel_dep(
     name = "gazelle",
     version = "0.31.0",
 )
+
+
+
+bazel_dep(
+
+    version = "1.0.1",
+)
