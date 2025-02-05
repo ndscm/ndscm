@@ -32,6 +32,27 @@ use_repo(
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Proto
 
 bazel_dep(name = "rules_proto", version = "6.0.2")
