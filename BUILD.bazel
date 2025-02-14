@@ -3,4 +3,6 @@ load("@gazelle//:def.bzl", "gazelle")
 # Go
 
 # gazelle:exclude **/*pb
+# gazelle:exclude **/*pbconnect
+
 gazelle(name = "gazelle")
