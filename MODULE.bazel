@@ -67,3 +67,20 @@ use_repo(
 bazel_dep(name = "rules_proto", version = "7.1.0")
 bazel_dep(name = "protobuf", version = "29.4")
 bazel_dep(name = "rules_buf", version = "0.3.0")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
