@@ -1,8 +1,22 @@
-load("@gazelle//:def.bzl", "gazelle")
+load("@gazelle//:def.bzl", "gazelle", "gazelle_binary")
 
-# Go
+# Gazelle
 
+gazelle_binary(
+    name = "gazelle_extend",
+    languages = [
+        "@gazelle//language/go",  # built-in
+        "@gazelle//language/proto",  # built-in
+    ],
+)
+
+# gazelle:exclude **/*_pb2_grpc.py
+# gazelle:exclude **/*_pb2.py
+# gazelle:exclude **/*_pb2.pyi
 # gazelle:exclude **/*pb
 # gazelle:exclude **/*pbconnect
 
-gazelle(name = "gazelle")
+gazelle(
+    name = "gazelle",
+    gazelle = ":gazelle_extend",
+)
