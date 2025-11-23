@@ -16,6 +16,7 @@ gazelle_binary(
 # gazelle:exclude **/*pb
 # gazelle:exclude **/*pbconnect
 # gazelle:exclude **/node_modules
+# gazelle:go_test file
 
 gazelle(
     name = "gazelle",
