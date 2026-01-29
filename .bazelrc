@@ -6,4 +6,8 @@ common --incompatible_strict_action_env
 
 
 
+
+
+
+
 build --workspace_status_command=./seed/devprod/buildinfo/generate-workspace-status.sh
