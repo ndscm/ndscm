@@ -18,6 +18,8 @@ gazelle_binary(
 # gazelle:exclude **/node_modules
 # gazelle:go_test file
 
+# gazelle:resolve go github.com/ndscm/theseed/seed/devprod/golink/proto/golinkpbconnect //seed/devprod/golink/proto:golink_go_connect
+
 gazelle(
     name = "gazelle",
     gazelle = ":gazelle_extend",
