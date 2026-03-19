@@ -5,7 +5,8 @@ go 1.24
 tool entgo.io/ent/cmd/ent
 
 require (
-	connectrpc.com/connect v1.16.2
+	connectrpc.com/connect v1.19.1
+	entgo.io/ent v0.14.5
 	github.com/google/uuid v1.6.0
 	github.com/rs/cors v1.11.1
 	google.golang.org/protobuf v1.36.10
@@ -16,7 +17,6 @@ require (
 	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.10-20250912141014-52f32327d4b0.1 // indirect
 	buf.build/go/protovalidate v1.0.1 // indirect
 	cel.dev/expr v0.25.1 // indirect
-	entgo.io/ent v0.14.5 // indirect
 	github.com/agext/levenshtein v1.2.3 // indirect
 	github.com/antlr4-go/antlr/v4 v4.13.1 // indirect
 	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
