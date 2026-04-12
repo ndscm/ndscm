@@ -39,3 +39,5 @@ require (
 	golang.org/x/tools/go/expect v0.1.1-deprecated // indirect
 	golang.org/x/tools/go/packages/packagestest v0.1.1-deprecated // indirect
 )
+
+replace github.com/ndscm/theseed => ./
