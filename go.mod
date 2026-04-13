@@ -4,6 +4,10 @@ go 1.24.0
 
 tool entgo.io/ent/cmd/ent
 
+tool github.com/rogpeppe/go-internal/fmtsort
+
+replace github.com/ndscm/theseed => ./
+
 require (
 	github.com/joho/godotenv v1.5.1
 	github.com/rs/cors v1.11.1
@@ -38,5 +42,3 @@ require (
 	golang.org/x/tools v0.39.0 // indirect
 	golang.org/x/tools/go/packages/packagestest v0.1.1-deprecated // indirect
 )
-
-replace github.com/ndscm/theseed => ./
