@@ -103,13 +103,6 @@ bazel_dep(name = "grpc", version = "1.74.1")
 
 
 
-
-
-
-
-
-
-
 # Proto
 
 bazel_dep(name = "protobuf", version = "33.4")
