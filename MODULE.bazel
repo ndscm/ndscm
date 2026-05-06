@@ -89,7 +89,7 @@ use_repo(
 )
 
 # Grpc
-bazel_dep(name = "grpc", version = "1.74.1")
+bazel_dep(name = "grpc", version = "1.80.0")
 
 
 
