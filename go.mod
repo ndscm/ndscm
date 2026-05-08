@@ -1,6 +1,6 @@
 module github.com/ndscm/theseed
 
-go 1.24.0
+go 1.26.2
 
 tool entgo.io/ent/cmd/ent
 
