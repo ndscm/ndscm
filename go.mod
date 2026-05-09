@@ -8,7 +8,10 @@ tool github.com/rogpeppe/go-internal/fmtsort
 
 replace github.com/ndscm/theseed => ./
 
-require github.com/rs/cors v1.11.1
+require (
+	github.com/rs/cors v1.11.1
+	golang.org/x/sync v0.18.0
+)
 
 require (
 	ariga.io/atlas v0.32.1-0.20250325101103-175b25e1c1b9 // indirect
@@ -34,7 +37,6 @@ require (
 	github.com/zclconf/go-cty v1.14.4 // indirect
 	github.com/zclconf/go-cty-yaml v1.1.0 // indirect
 	golang.org/x/mod v0.30.0 // indirect
-	golang.org/x/sync v0.18.0 // indirect
 	golang.org/x/text v0.31.0 // indirect
 	golang.org/x/tools v0.39.0 // indirect
 	golang.org/x/tools/go/packages/packagestest v0.1.1-deprecated // indirect
