@@ -11,6 +11,7 @@ replace github.com/ndscm/theseed => ./
 require (
 	github.com/rs/cors v1.11.1
 	golang.org/x/sync v0.18.0
+	google.golang.org/protobuf v1.36.12
 )
 
 require (
