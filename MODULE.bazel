@@ -48,3 +48,6 @@ bazel_dep(name = "rules_pkg", version = "1.1.0")
 include("//seed/vendor/proto:proto.MODULE.bazel")
 
 # Apps
+
+## Bazel
+include("//seed/vendor/bazel:bazel.MODULE.bazel")
