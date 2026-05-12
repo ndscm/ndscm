@@ -28,6 +28,3 @@ node_modules
 
 # Python
 __pycache__
-
-# Ndscm
-ndscm.Makefile
