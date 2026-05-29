@@ -8,6 +8,7 @@ load("@gazelle//:def.bzl", "gazelle", "gazelle_binary")
 # gazelle:exclude **/ent
 # gazelle:exclude **/node_modules
 # gazelle:proto file
+# gazelle:resolve_regexp go github.com/([^/]+)/([^/]+)/(.*)/([^/]+)pbconnect //${3}:${4}_go_connect
 
 # Gazelle
 
