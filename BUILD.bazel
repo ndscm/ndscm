@@ -1,5 +1,14 @@
 load("@gazelle//:def.bzl", "gazelle", "gazelle_binary")
 
+# gazelle:exclude **/*_pb2_grpc.py
+# gazelle:exclude **/*_pb2.py
+# gazelle:exclude **/*_pb2.pyi
+# gazelle:exclude **/*pb
+# gazelle:exclude **/*pbconnect
+# gazelle:exclude **/ent
+# gazelle:exclude **/node_modules
+# gazelle:proto file
+
 # Gazelle
 
 gazelle_binary(
