@@ -9,6 +9,7 @@ tool github.com/rogpeppe/go-internal/fmtsort
 replace github.com/ndscm/theseed => ./
 
 require (
+	github.com/google/uuid v1.6.0
 	github.com/rs/cors v1.11.1
 	golang.org/x/sync v0.18.0
 	google.golang.org/protobuf v1.36.12
@@ -23,7 +24,6 @@ require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/go-openapi/inflect v0.19.0 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
-	github.com/google/uuid v1.6.0 // indirect
 	github.com/hashicorp/hcl/v2 v2.18.1 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
