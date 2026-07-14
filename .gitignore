@@ -31,3 +31,10 @@ node_modules
 
 # Python
 __pycache__
+
+# Playwright
+.playwright
+.playwright-cli
+blob-report
+playwright-report
+test-results
