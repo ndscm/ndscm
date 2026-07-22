@@ -9,6 +9,7 @@ tool github.com/rogpeppe/go-internal/fmtsort
 replace github.com/ndscm/theseed => ./
 
 require (
+	filippo.io/age v1.3.1
 	github.com/getsops/sops/v3 v3.13.1
 	github.com/google/uuid v1.6.0
 	github.com/rs/cors v1.11.1
@@ -29,7 +30,6 @@ require (
 	cloud.google.com/go/monitoring v1.29.0 // indirect
 	cloud.google.com/go/storage v1.63.0 // indirect
 	entgo.io/ent v0.14.6 // indirect
-	filippo.io/age v1.3.1 // indirect
 	filippo.io/edwards25519 v1.2.0 // indirect
 	filippo.io/hpke v0.4.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.22.0 // indirect
