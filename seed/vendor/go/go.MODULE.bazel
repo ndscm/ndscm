@@ -3,6 +3,7 @@ bazel_dep(name = "gazelle", version = "0.50.0")
 
 # Dependencies that required by both bazel and go mod
 bazel_dep(name = "cel-spec", version = "0.25.1", repo_name = "dev_cel_expr")
+bazel_dep(name = "protoc-gen-validate", version = "1.3.3")
 
 go_sdk = use_extension("@rules_go//go:extensions.bzl", "go_sdk")
 go_sdk.download(
@@ -12,6 +13,15 @@ go_sdk.download(
 
 go_deps = use_extension("@gazelle//:extensions.bzl", "go_deps")
 go_deps.from_file(go_mod = "//:go.mod")
+
+# SOPS ships pre-generated *.pb.go in its keyservice package; disable proto rule
+# generation so gazelle uses those checked-in files instead of regenerating.
+go_deps.gazelle_override(
+    directives = [
+        "gazelle:proto disable_global",
+    ],
+    path = "github.com/getsops/sops/v3",
+)
 
 inject_repo(go_deps, "dev_cel_expr")
 
