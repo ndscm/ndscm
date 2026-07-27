@@ -1,5 +1,6 @@
+import %workspace%/seed/vendor/bazel/bazel.bazelrc
+
 common --build_event_binary_file=.bep
-common --experimental_isolated_extension_usages
 common --incompatible_strict_action_env
 
 build --workspace_status_command=./seed/infra/buildinfo/bazel/generate-workspace-status.sh
