@@ -3,5 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "author": "ndscm",
+  "devDependencies": {
+    "prettier": "catalog:"
+  },
   "packageManager": "pnpm@12.5.1"
 }
