@@ -1,0 +1,7 @@
+{
+  "name": "@ndscmjs/ndscm-repo",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "ndscm",
+  "packageManager": "pnpm@12.5.1"
+}
