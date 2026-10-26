@@ -1,0 +1,52 @@
+import { type UpstreamConfig } from "ndscm/config/UPSTREAM"
+
+export default {
+  theseed: {
+    converge: "melt",
+    scm: "git",
+    repo: "git@github.com:ndscm/theseed.git",
+    tracking: "main",
+    include: [
+      // sort
+      "^.bazeliskrc$",
+      "^.bazelrc$",
+      "^.gitignore$",
+      "^BUILD.bazel$",
+      "^go.mod$",
+      "^go.MODULE.bazel$",
+      "^go.sum$",
+      "^MODULE.bazel.lock$",
+      "^MODULE.bazel$",
+      "^seed/BUILD.bazel$",
+      "^seed/devprod/buildinfo/generate-workspace-status.sh$",
+      "^seed/devprod/ndscm/.*$",
+      "^seed/devprod/open/ndscm/.*external.*$",
+      "^seed/devprod/rbe/bes/.*$",
+      "^seed/devprod/rbe/rbe.bazelrc$",
+      "^seed/devprod/scalpel/go/.*$",
+      "^seed/devprod/starlark/inbazel/go/.*$",
+      "^seed/infra/buildinfo/bazel/.*$",
+      "^seed/infra/buildinfo/go/.*$",
+      "^seed/infra/context/go/.*$",
+      "^seed/infra/dotenv/go/.*$",
+      "^seed/infra/error/go/.*$",
+      "^seed/infra/flag/go/.*$",
+      "^seed/infra/http/go/.*$",
+      "^seed/infra/init/go/.*$",
+      "^seed/infra/log/go/.*$",
+      "^seed/infra/shell/go/.*$",
+      "^seed/infra/tson/go/.*$",
+      "^seed/vendor/bazel/.*$",
+      "^seed/vendor/go/.*$",
+      "^seed/vendor/grpc/.*$",
+      "^seed/vendor/proto/.*$",
+      "^WORKSPACE.bazel$",
+    ],
+    rename: [
+      {
+        match: "^seed/devprod/ndscm/README.md$",
+        replace: "README.md",
+      },
+    ],
+  },
+} satisfies UpstreamConfig
