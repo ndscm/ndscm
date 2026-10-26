@@ -4,6 +4,7 @@
   "license": "MIT",
   "author": "ndscm",
   "devDependencies": {
+    "ndscm": "catalog:",
     "prettier": "catalog:"
   },
   "packageManager": "pnpm@12.5.1"
