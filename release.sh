@@ -9,6 +9,11 @@ if [[ -z "${release_tag}" ]]; then
   release_tag=$(date -u "+v%y.%m.%d" | sed 's/\.0*/./g; s/v0*/v/')
 fi
 
+if [[ ! "${release_tag}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-.*)?$ ]]; then
+  printf "error: tag '%s' must be vX.Y.Z with an optional -suffix\n" "${release_tag}" >&2
+  exit 1
+fi
+
 git fetch --all --tags --prune --prune-tags
 
 if [[ -z "$(git tag --list "${release_tag}")" ]]; then
@@ -19,6 +24,13 @@ fi
 git checkout --detach "${release_tag}"
 git reset --hard "${release_tag}"
 git clean -fdx
+
+# Make sure git describe always generates the same release tag.
+git_tag="$(git describe --tags --always --dirty)"
+if [[ "${git_tag}" != "${release_tag}" ]]; then
+  printf "error: git tag '%s' does not match release tag '%s'\n" "${git_tag}" "${release_tag}" >&2
+  exit 1
+fi
 
 nd check
 
@@ -42,3 +54,20 @@ for platform in "${platforms[@]}"; do
 
   tar czvf "./.cache/release/ndscm-${kernel}-${arch}.tar.gz" -C "$(dirname "${executable}")" "$(basename "${executable}")"
 done
+
+# Publish the GitHub release and attach every built artifact. If the release
+# already exists, leave it untouched and exit.
+if gh release view "${release_tag}" >/dev/null 2>&1; then
+  printf "release '%s' already exists, nothing to do\n" "${release_tag}"
+  exit 0
+fi
+
+gh release create "${release_tag}" ./.cache/release/* \
+  --title "${release_tag}" \
+  --notes "" \
+  --draft
+
+# The GitHub release is staged as a draft, so leave the final publish step to
+# the user once they've reviewed the draft.
+printf "\ndraft release '%s' created. to finish publishing, run:\n" "${release_tag}"
+printf "  gh release edit '%s' --draft=false\n" "${release_tag}"
