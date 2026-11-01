@@ -25,7 +25,6 @@ export default {
       "^seed/devprod/rbe/rbe.bazelrc$",
       "^seed/devprod/scalpel/go/.*$",
       "^seed/devprod/starlark/inbazel/go/.*$",
-      "^seed/devprod/starlark/xslash/.*$",
       "^seed/infra/buildinfo/bazel/.*$",
       "^seed/infra/buildinfo/go/.*$",
       "^seed/infra/context/go/.*$",
@@ -44,6 +43,11 @@ export default {
       "^seed/vendor/grpc/.*$",
       "^seed/vendor/proto/.*$",
       "^WORKSPACE.bazel$",
+    ],
+    exclude: [
+      // sort
+      "^seed/prebuilt/bazel/BUILD.bazel$",
+      "^seed/prebuilt/go/BUILD.bazel$",
     ],
     rename: [
       {
