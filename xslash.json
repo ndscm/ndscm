@@ -1,0 +1,6 @@
+{
+  "bazel": "seed/prebuilt/bazel/bin/bazelisk.xslash",
+  "bazelisk": "seed/prebuilt/bazel/bin/bazelisk.xslash",
+  "go": "seed/prebuilt/go/bin/go.xslash",
+  "gofmt": "seed/prebuilt/go/bin/gofmt.xslash"
+}
